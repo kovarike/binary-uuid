@@ -1,0 +1,8 @@
+node_modules
+./test
+test
+test/test.ts
+dist
+./dist
+dist
+.npmrc
