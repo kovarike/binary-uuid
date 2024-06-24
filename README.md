@@ -1,9 +1,9 @@
-# @kovarike/cocc
+# binary-uuid
 
-The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the Id and Token.  
+The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the UUID and Token.  
 
 
-[![NPM](https://img.shields.io/npm/v/@kovarike/cocc.svg?logo=npm)](https://www.npmjs.com/package/@kovarike/cocc)
+[![NPM](https://img.shields.io/npm/v/@kovarike/cocc.svg?logo=npm)](https://www.npmjs.com/package/binary-uuid)
 ![Uses TypeScript](https://img.shields.io/badge/Uses-Typescript-294E80.svg)
 
 ## Installing
@@ -17,31 +17,31 @@ npm i binary-uuid
 
 ## Basic Usage
 
-Just call one of the `{Token, Id}` functions after importing them:
+Just call one of the `{Token, UIID}` functions after importing them:
 
 ```typescript
-import {cocc} from '@kovarike/cocc'
+import {binary} from 'binary-uuid'
 
-console.log(cocc.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b 
-console.log(cocc.Id()) // 008a0326-b64f-427a-a654-82628fc3e033
+console.log(binary.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b 
+console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
  
 ```
 
 
 ```javascript
-const {cocc} = require("@kovarike/cocc")
+const {binary} = require("binary-uuid")
 
-console.log(cocc.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
-console.log(cocc.Id()) // 008a0326-b64f-427a-a654-82628fc3e033
+console.log(binary.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
+console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
  
 ```
 ## API
 
-### `@kovarike/cocc`
+### `binary-uuid`
 
 `Token` — With each call, the function returns a Token. which follows the Token standard.
 
-`Id` — With each call, the function returns an ID that follows the uuid pattern.
+`UUID` — With each call, the function returns an UUID that follows the uuid pattern.
 
 
 ```typescript
@@ -51,7 +51,7 @@ export function Token(){
   return token; // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
 }
 
-export function Id(): string {
+export function UUID(): string {
   const set: Set<string> = new Set();
   const id  = IsId({set})
   return id; // 008a0326-b64f-427a-a654-82628fc3e033
@@ -73,20 +73,20 @@ export function IsValid(params: string, value?:string): boolean {
 ```
 
 ```typescript
-import {cocc} from '@kovarike/cocc'
+import {binary} from 'binary-uuid'
 
-const uuid = cocc.Id();
-cocc.IsValid(uuid);
+const uuid = binary.UUID();
+binary.IsValid(uuid); //true
 
-const token = cocc.Token();
-cocc.IsValid(token);
+const token = binary.Token();
+binary.IsValid(token); //true
 
-cocc.IsValid(uuid, token); 
+binary.IsValid(uuid, token); // true
 
 ```
 
 ## Authors and License
 
-[kovarike](https://github.com/kovarike) and [project](https://github.com/kovarike/cocc).
+[kovarike](https://github.com/kovarike) and [project](https://github.com/kovarike/binary-uuid).
 
-MIT License, see the included [MIT](https://github.com/kovarike/cocc/blob/master/LICENSE) file.
+MIT License, see the included [MIT](https://github.com/kovarike/binary-uuid/blob/master/LICENSE) file.
