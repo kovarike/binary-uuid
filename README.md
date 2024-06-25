@@ -1,4 +1,4 @@
-# binary-uuid
+# @binary-id
 
 The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the UUID and Token.  
 
@@ -9,10 +9,10 @@ The system uses a combination of binary, bytes and hexadecimals to generate the 
 ## Installing
 
 ```shell
-npm i binary-uuid
+npm i binary-id
 
 # If you're using NPM:
-# npm install binary-uuid
+# npm install binary-id
 ```
 
 ## Basic Usage
@@ -20,7 +20,7 @@ npm i binary-uuid
 Just call one of the `{Token, UIID}` functions after importing them:
 
 ```typescript
-import {binary} from 'binary-uuid'
+import {binary} from 'binary-id'
 
 console.log(binary.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b 
 console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
@@ -29,7 +29,7 @@ console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
 
 
 ```javascript
-const {binary} = require("binary-uuid")
+const {binary} = require("binary-id")
 
 console.log(binary.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
 console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
@@ -37,7 +37,7 @@ console.log(binary.UUID()) // 008a0326-b64f-427a-a654-82628fc3e033
 ```
 ## API
 
-### `binary-uuid`
+### `binary-id`
 
 `Token` — With each call, the function returns a Token. which follows the Token standard.
 
@@ -73,7 +73,7 @@ export function IsValid(params: string, value?:string): boolean {
 ```
 
 ```typescript
-import {binary} from 'binary-uuid'
+import {binary} from 'binary-id'
 
 const uuid = binary.UUID();
 binary.IsValid(uuid); //true

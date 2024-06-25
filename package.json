@@ -1,6 +1,6 @@
 {
-  "name": "binary-uuid",
-  "version": "1.7.8",
+  "name": "binary-id",
+  "version": "1.7.9",
   "description": "Created a sistem for generation of token's and id's",
   "files": [
     "dist"
@@ -23,7 +23,7 @@
   "author": "Danilo Silva",
   "license": "MIT",
   "publishConfig": {
-    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+    "@kovarike:registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
