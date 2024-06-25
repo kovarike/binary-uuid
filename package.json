@@ -38,6 +38,8 @@
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "binary-id": "^1.7.9"
   }
-
 }
